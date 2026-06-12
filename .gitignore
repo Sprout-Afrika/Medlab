@@ -1,0 +1,47 @@
+# Local environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies and generated output
+node_modules/
+dist/
+build/
+.cache/
+coverage/
+
+# Logs and runtime files
+*.log
+logs/
+*.pid
+*.seed
+
+# Temporary and backup files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*.swo
+*~
+
+# Local editor and IDE settings
+.vscode/
+.idea/
+*.code-workspace
+
+# Local AI assistant configuration
+.claude/
+.agents/
+.codex/
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Test and browser artifacts
+playwright-report/
+test-results/
+screenshots/
+*.png.tmp

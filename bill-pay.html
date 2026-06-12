@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bill Pay | MedLab, Inc.</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .page-hero {
+      background-image: linear-gradient(90deg, rgba(0,30,80,0.93) 0%, rgba(0,70,150,0.80) 100%),
+        url('https://images.unsplash.com/photo-1542884841-9f546e727bca?auto=format&fit=crop&w=1400&q=80');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 60px 0;
+    }
+    .page-hero .container { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+    .page-hero h1 { font-size: 36px; font-weight: 800; margin-bottom: 12px; }
+    .page-hero p { font-size: 16px; opacity: 0.88; max-width: 620px; }
+    .breadcrumb { font-size: 12.5px; margin-bottom: 12px; opacity: 0.7; }
+    .breadcrumb a { color: rgba(255,255,255,0.7); }
+    .pay-card { max-width: 560px; margin: 0 auto; background: #fff; border: 1px solid #dde4ed; border-radius: 12px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
+    .pay-card h2 { font-size: 22px; font-weight: 800; color: #003366; margin-bottom: 10px; }
+    .pay-card p { font-size: 14.5px; color: #4a5568; margin-bottom: 28px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 700; color: #1a2740; margin-bottom: 6px; }
+    .form-group input, .form-group select {
+      width: 100%; padding: 11px 14px; border: 1px solid #cdd5de; border-radius: 6px;
+      font-size: 14px; color: #333; font-family: inherit; transition: border-color 0.2s;
+    }
+    .form-group input:focus, .form-group select:focus { outline: none; border-color: #005baa; box-shadow: 0 0 0 3px rgba(0,91,170,0.1); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .pay-btn { width: 100%; padding: 14px; background: #e8a000; color: #fff; font-size: 16px; font-weight: 700; border: none; border-radius: 6px; cursor: pointer; transition: background 0.2s; margin-top: 8px; }
+    .pay-btn:hover { background: #c98900; }
+    .secure-badge { text-align: center; font-size: 12.5px; color: #4a5568; margin-top: 14px; }
+    @media(max-width:500px){ .form-row { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  &nbsp;📞 <strong>716.633.8001</strong> &nbsp;|&nbsp;
+  ✉ <a href="mailto:info@medlabcares.com">info@medlabcares.com</a> &nbsp;|&nbsp;
+  🕐 Mon – Fri &nbsp;8:00 AM – 4:00 PM
+</div>
+
+<header>
+  <div class="nav-wrapper">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">ML</div>
+      <div class="logo-text">
+        <div class="brand">MedLab, Inc.</div>
+        <div class="tagline">Clinical Laboratory Services</div>
+      </div>
+    </a>
+    <nav>
+      <a href="toxicology.html">Toxicology</a>
+      <a href="covid.html">COVID / Flu / RSV</a>
+      <a href="appointments.html">Appointments</a>
+      <a href="results.html">Results</a>
+      <a href="careers.html">Careers</a>
+      <div class="dropdown">
+        <a href="#">Portal Login</a>
+        <div class="dropdown-menu">
+          <a href="#">Toxicology Customer Login</a>
+          <a href="#">COVID Testing Login</a>
+        </div>
+      </div>
+      <a href="bill-pay.html" class="nav-bill-pay" style="background:#c98900;">Bill Pay</a>
+    </nav>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+  <nav class="mobile-nav">
+    <a href="toxicology.html">Toxicology</a>
+    <a href="covid.html">COVID / Flu / RSV</a>
+    <a href="appointments.html">Appointments</a>
+    <a href="results.html">Results</a>
+    <a href="careers.html">Careers</a>
+    <a href="#">Toxicology Customer Login</a>
+    <a href="#">COVID Testing Portal</a>
+    <a href="bill-pay.html">Bill Pay</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> › Bill Pay</div>
+    <h1>Pay Your Bill Online</h1>
+    <p>Securely pay your MedLab, Inc. laboratory invoice online. Accepted payment methods include all major credit and debit cards.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="pay-card">
+      <h2>💳 Online Bill Payment</h2>
+      <p>Enter your account number from your invoice along with your payment details below. For billing questions, call us at <a href="tel:7166338001" style="color:#005baa;font-weight:600;">716.633.8001</a>.</p>
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label for="account_num">Account / Invoice Number *</label>
+          <input type="text" id="account_num" name="account_num" placeholder="e.g. ML-2024-00001" required />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bp_first">First Name *</label>
+            <input type="text" id="bp_first" name="bp_first" placeholder="Jane" required />
+          </div>
+          <div class="form-group">
+            <label for="bp_last">Last Name *</label>
+            <input type="text" id="bp_last" name="bp_last" placeholder="Smith" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="bp_amount">Payment Amount ($) *</label>
+          <input type="number" id="bp_amount" name="bp_amount" placeholder="0.00" min="1" step="0.01" required />
+        </div>
+        <div class="form-group">
+          <label for="card_num">Card Number *</label>
+          <input type="text" id="card_num" name="card_num" placeholder="•••• •••• •••• ••••" maxlength="19" required />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="card_exp">Expiration Date *</label>
+            <input type="text" id="card_exp" name="card_exp" placeholder="MM / YY" maxlength="7" required />
+          </div>
+          <div class="form-group">
+            <label for="card_cvv">CVV *</label>
+            <input type="text" id="card_cvv" name="card_cvv" placeholder="•••" maxlength="4" required />
+          </div>
+        </div>
+        <button type="submit" class="pay-btn">🔒 Submit Secure Payment</button>
+      </form>
+      <div class="secure-badge">🔒 &nbsp;256-bit SSL encryption &nbsp;|&nbsp; PCI-DSS Compliant Payment Processing</div>
+    </div>
+  </div>
+</section>
+
+<div class="contact-strip">
+  <div class="container">
+    <div class="contact-item"><span class="icon">📍</span><h4>Address</h4><p>600 Cayuga Rd.<br>Buffalo, NY 14225</p></div>
+    <div class="contact-item"><span class="icon">📞</span><h4>Phone</h4><a href="tel:7166338001">716.633.8001</a></div>
+    <div class="contact-item"><span class="icon">✉️</span><h4>Email</h4><a href="mailto:info@medlabcares.com">info@medlabcares.com</a></div>
+    <div class="contact-item"><span class="icon">🕐</span><h4>Office Hours</h4><p>Monday – Friday<br>8:00 AM – 4:00 PM</p></div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon">ML</div>
+          <div class="logo-text"><div class="brand">MedLab, Inc.</div><div class="tagline">Clinical Laboratory Services</div></div>
+        </div>
+        <p>A state-of-the-art clinical laboratory providing toxicology, molecular, and pain management testing services since 1994.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="toxicology.html">Toxicology Testing</a></li>
+          <li><a href="covid.html">COVID / Flu / RSV</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="appointments.html">Appointments</a></li>
+          <li><a href="results.html">Get My Results</a></li>
+          <li><a href="bill-pay.html">Bill Pay</a></li>
+          <li><a href="privacy.html">Privacy Practices</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 MedLab, Inc. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Notice of Privacy Practices</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>View My Results | MedLab, Inc.</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .page-hero {
+      background-image: linear-gradient(90deg, rgba(0,30,80,0.93) 0%, rgba(0,70,150,0.80) 100%),
+        url('https://images.unsplash.com/photo-1615461066159-fea0960485d5?auto=format&fit=crop&w=1400&q=80');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 60px 0;
+    }
+    .page-hero .container { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+    .page-hero h1 { font-size: 36px; font-weight: 800; margin-bottom: 12px; }
+    .page-hero p { font-size: 16px; opacity: 0.88; max-width: 620px; }
+    .breadcrumb { font-size: 12.5px; margin-bottom: 12px; opacity: 0.7; }
+    .breadcrumb a { color: rgba(255,255,255,0.7); }
+    .portal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+    .portal-card { background: #fff; border: 1px solid #dde4ed; border-radius: 12px; padding: 36px; box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
+    .portal-card h2 { font-size: 20px; font-weight: 800; color: #003366; margin-bottom: 8px; }
+    .portal-card .subtitle { font-size: 13.5px; color: #4a5568; margin-bottom: 28px; }
+    .portal-card.covid-portal { border-top: 4px solid #0077cc; }
+    .portal-card.tox-portal { border-top: 4px solid #003366; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 700; color: #1a2740; margin-bottom: 6px; }
+    .form-group input { width: 100%; padding: 11px 14px; border: 1px solid #cdd5de; border-radius: 6px; font-size: 14px; color: #333; font-family: inherit; transition: border-color 0.2s; }
+    .form-group input:focus { outline: none; border-color: #005baa; box-shadow: 0 0 0 3px rgba(0,91,170,0.1); }
+    .login-btn { width: 100%; padding: 14px; font-size: 15px; font-weight: 700; border: none; border-radius: 6px; cursor: pointer; transition: background 0.2s; }
+    .login-btn.blue-btn { background: #0077cc; color: #fff; }
+    .login-btn.blue-btn:hover { background: #005baa; }
+    .login-btn.navy-btn { background: #003366; color: #fff; }
+    .login-btn.navy-btn:hover { background: #002244; }
+    .divider { display: flex; align-items: center; gap: 12px; margin: 18px 0; color: #aaa; font-size: 12px; }
+    .divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: #dde4ed; }
+    .forgot-link { text-align: center; font-size: 13px; color: #005baa; display: block; margin-top: 14px; }
+    .forgot-link:hover { text-decoration: underline; }
+    .info-cards { display: flex; flex-direction: column; gap: 18px; }
+    .info-item { display: flex; gap: 16px; align-items: flex-start; padding: 20px; background: #f4f7fa; border-radius: 10px; }
+    .info-item .icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+    .info-item h4 { font-size: 15px; font-weight: 700; color: #003366; margin-bottom: 4px; }
+    .info-item p { font-size: 13.5px; color: #4a5568; line-height: 1.65; }
+    @media(max-width:700px){ .portal-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  &nbsp;📞 <strong>716.633.8001</strong> &nbsp;|&nbsp;
+  ✉ <a href="mailto:info@medlabcares.com">info@medlabcares.com</a> &nbsp;|&nbsp;
+  🕐 Mon – Fri &nbsp;8:00 AM – 4:00 PM
+</div>
+
+<header>
+  <div class="nav-wrapper">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">ML</div>
+      <div class="logo-text">
+        <div class="brand">MedLab, Inc.</div>
+        <div class="tagline">Clinical Laboratory Services</div>
+      </div>
+    </a>
+    <nav>
+      <a href="toxicology.html">Toxicology</a>
+      <a href="covid.html">COVID / Flu / RSV</a>
+      <a href="appointments.html">Appointments</a>
+      <a href="results.html" style="color:var(--light-blue);">Results</a>
+      <a href="careers.html">Careers</a>
+      <div class="dropdown">
+        <a href="#">Portal Login</a>
+        <div class="dropdown-menu">
+          <a href="#">Toxicology Customer Login</a>
+          <a href="#">COVID Testing Login</a>
+        </div>
+      </div>
+      <a href="bill-pay.html" class="nav-bill-pay">Bill Pay</a>
+    </nav>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+  <nav class="mobile-nav">
+    <a href="toxicology.html">Toxicology</a>
+    <a href="covid.html">COVID / Flu / RSV</a>
+    <a href="appointments.html">Appointments</a>
+    <a href="results.html">Results</a>
+    <a href="careers.html">Careers</a>
+    <a href="#">Toxicology Customer Login</a>
+    <a href="#">COVID Testing Portal</a>
+    <a href="bill-pay.html">Bill Pay</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> › View Results</div>
+    <h1>Access Your Test Results</h1>
+    <p>Log in to your patient or customer portal below to securely view your laboratory results. Results are typically available within 24 hours of specimen receipt.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="portal-grid">
+
+      <div class="info-cards">
+        <div class="info-item">
+          <div class="icon">⏱</div>
+          <div>
+            <h4>Fast Results — Within 24 Hours</h4>
+            <p>Most results are available within 24 hours of specimen receipt at our laboratory. COVID, Flu, and RSV results are often available same day.</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon">🔒</div>
+          <div>
+            <h4>Secure, HIPAA-Compliant Portal</h4>
+            <p>Your results are protected by industry-standard encryption. Access is restricted to authorized users only, and all activity is logged for your security.</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon">💻</div>
+          <div>
+            <h4>Two Separate Portals</h4>
+            <p>MedLab operates two distinct patient portals — one for COVID/Flu/RSV testing results, and one for toxicology and clinical customers. Use the correct portal for your test type.</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon">📞</div>
+          <div>
+            <h4>Need Help?</h4>
+            <p>Can't access your results? Call us at <a href="tel:7166338001" style="color:#005baa;font-weight:600;">716.633.8001</a> — a real person in our lab will assist you directly.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:24px;">
+        <div class="portal-card covid-portal">
+          <h2>🦠 COVID / Flu / RSV Results</h2>
+          <p class="subtitle">Access results for your respiratory PCR testing — COVID-19, Influenza A &amp; B, and RSV.</p>
+          <form action="#" method="POST">
+            <div class="form-group">
+              <label for="covid_user">Email Address or Patient ID</label>
+              <input type="text" id="covid_user" name="covid_user" placeholder="your@email.com" />
+            </div>
+            <div class="form-group">
+              <label for="covid_pass">Password</label>
+              <input type="password" id="covid_pass" name="covid_pass" placeholder="••••••••" />
+            </div>
+            <button type="submit" class="login-btn blue-btn">Log In to COVID Testing Portal</button>
+          </form>
+          <a href="#" class="forgot-link">Forgot your password? Reset it here</a>
+        </div>
+
+        <div class="portal-card tox-portal">
+          <h2>🔬 Toxicology Customer Portal</h2>
+          <p class="subtitle">For agencies, clinicians, and organizations with toxicology testing accounts.</p>
+          <form action="#" method="POST">
+            <div class="form-group">
+              <label for="tox_user">Username or Account ID</label>
+              <input type="text" id="tox_user" name="tox_user" placeholder="Account username" />
+            </div>
+            <div class="form-group">
+              <label for="tox_pass">Password</label>
+              <input type="password" id="tox_pass" name="tox_pass" placeholder="••••••••" />
+            </div>
+            <button type="submit" class="login-btn navy-btn">Log In to Toxicology Portal</button>
+          </form>
+          <a href="#" class="forgot-link">Forgot your password? Reset it here</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="contact-strip">
+  <div class="container">
+    <div class="contact-item"><span class="icon">📍</span><h4>Address</h4><p>600 Cayuga Rd.<br>Buffalo, NY 14225</p></div>
+    <div class="contact-item"><span class="icon">📞</span><h4>Phone</h4><a href="tel:7166338001">716.633.8001</a></div>
+    <div class="contact-item"><span class="icon">✉️</span><h4>Email</h4><a href="mailto:info@medlabcares.com">info@medlabcares.com</a></div>
+    <div class="contact-item"><span class="icon">🕐</span><h4>Office Hours</h4><p>Monday – Friday<br>8:00 AM – 4:00 PM</p></div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon">ML</div>
+          <div class="logo-text"><div class="brand">MedLab, Inc.</div><div class="tagline">Clinical Laboratory Services</div></div>
+        </div>
+        <p>A state-of-the-art clinical laboratory providing toxicology, molecular, and pain management testing services since 1994.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="toxicology.html">Toxicology Testing</a></li>
+          <li><a href="covid.html">COVID / Flu / RSV</a></li>
+          <li><a href="toxicology.html#definitive">Definitive Testing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="appointments.html">Book an Appointment</a></li>
+          <li><a href="results.html">Get My Results</a></li>
+          <li><a href="bill-pay.html">Bill Pay</a></li>
+          <li><a href="privacy.html">Privacy Practices</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 MedLab, Inc. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Notice of Privacy Practices</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
